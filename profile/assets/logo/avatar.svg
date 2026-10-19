@@ -1,0 +1,87 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Primary brand gradient with depth -->
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2e8bff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0074e1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#005db8;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Secondary gradient for wing -->
+    <linearGradient id="wingGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#87bbff;stop-opacity:0.9" />
+      <stop offset="50%" style="stop-color:#5ca3ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2e8bff;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <!-- Leaf gradient with tertiary colors -->
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffb77c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#e68600;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a45c00;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Background gradient for depth -->
+    <radialGradient id="backgroundGradient" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" style="stop-color:#f8fafd;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#e4ebf0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d6dde2;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offset"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Subtle glow for expressiveness -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background with subtle gradient -->
+  <rect width="512" height="512" fill="url(#backgroundGradient)"/>
+  
+  <!-- Transformed and scaled bird paths for square format -->
+  <g transform="translate(106, 76) scale(0.3)" filter="url(#dropShadow)">
+    
+    <!-- Bird body with primary gradient -->
+    <path 
+      d="M1030.94 499.383C1002.04 493.732 962.02 477.482 962.02 461.912C962.02 426.235 907.212 373.334 831.577 373.334C702.503 373.334 651.943 488.361 635.637 541.122C501.772 668.5 484.5 695.263 286.1 717.034C185.222 728.104 76.0353 769.238 2.1943 840.455C-9 921.5 29.1943 1047.28 110.579 1080C154.042 1035.35 214.903 965.976 279.525 956.294C362.558 982.881 437.236 996.383 501.772 996.383C718.402 996.383 779.924 844.851 797.326 754.345C822.692 617.607 960.886 549.793 1080 509.034L1030.94 499.383Z" 
+      fill="url(#primaryGradient)"
+      filter="url(#glow)"
+    />
+    
+    <!-- Bird wing with subtle transparency -->
+    <path 
+      d="M635.637 541.122C557.796 453.095 472.72 411.217 390.096 370.717C264.037 308.74 173.69 235.648 104.68 112.836C90.4046 239.104 90.1463 366.503 128.115 489.185C160.452 593.467 214.574 671.161 286.1 717.034C549.5 717.034 549.5 717.034 635.637 541.122Z" 
+      fill="url(#wingGradient)"
+    />
+    
+    <!-- Leaf with tertiary colors -->
+    <path 
+      d="M896.346 249.479C927.124 287.754 945.587 321.299 951.563 332.583C971.838 376.435 1032.87 505.495 1033.18 506.17L1080 509.034C1078.47 505.648 1050.69 448.275 1019.61 388.598C1027.35 377.578 1033.03 371.167 1033.23 370.946L1070.15 329.805L989.164 331.687C985.04 324.239 981.004 317.047 977.091 310.241C989.491 300.05 1012.75 278.718 1034.18 246.785C1065.3 200.434 1065.15 121.123 1065.15 121.123C1065.15 121.123 1013.54 147.799 986.396 197.335C969.343 228.427 966.499 267.706 966.741 292.641C965.602 290.755 964.467 288.893 963.366 287.099C945.93 258.871 926.21 233.731 906.794 212.085C924.658 190.143 950.157 154.73 955.685 125.43C964.39 79.3117 944.946 0 944.946 0C944.946 0 908.493 42.2325 895.443 95.4895C888.34 124.476 886.999 162.585 887.247 191.314C845.588 148.994 806.157 122.876 806.157 122.876C791.273 112.14 770.239 102.029 742.79 100.722C681.782 97.8374 615.938 141.421 615.938 141.421C615.938 141.421 625.949 178.942 714.577 177.282C760.096 176.435 790.168 169.265 808.669 162.499C830.398 181.979 845.674 191.83 876.729 228.436C860.036 222.064 835.377 215.749 804.437 216.819C744.373 218.896 680.232 273.361 680.232 273.361C680.232 273.361 726.82 307.067 797.161 288.095C843.405 275.612 878.578 258.562 896.346 249.479Z" 
+      fill="url(#leafGradient)"
+    />
+    
+  </g>
+  
+  <!-- Subtle brand accent elements for expressiveness -->
+  <circle cx="420" cy="92" r="8" fill="#ffb77c" opacity="0.6"/>
+  <circle cx="440" cy="420" r="6" fill="#87bbff" opacity="0.5"/>
+  <circle cx="72" cy="380" r="4" fill="#ff897d" opacity="0.4"/>
+  
+</svg>
